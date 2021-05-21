@@ -12,8 +12,6 @@ public class Location {
         nextId++;
     }
 
-    // TODO: Add a constructor that takes a string as a parameter and assigns it to the 'value' field. The
-    //  constructor should also call the empty constructor in order to initialize the 'id' field.
     public Location(String value){
         this();  //Does this run Location() to get the next ID? ask Mario or Brian, even if it IS a stupid question.
         this.value = value;
