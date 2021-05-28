@@ -14,12 +14,20 @@ public class Job {
     private CoreCompetency coreCompetency;
 
 
-
-  //Ask if this looks good?
-
     public Job() {
         this.id = nextId;
         nextId++;
+    }
+
+    @Override
+    public String toString(){
+        return  "\nID: " + this.getId() +
+                "\nName: " + this.name +
+                "\nEmployer: " + this.employer +
+                "\nLocation: " + this.location +
+                "\nPosition Type: " + this.positionType +
+                "\nCore Competency: " + this.coreCompetency +
+                "\n";
     }
 
     public Job(String name, Employer employer, Location location, PositionType positionType, CoreCompetency coreCompetency){
@@ -30,9 +38,6 @@ public class Job {
         this.positionType = positionType;
         this.coreCompetency = coreCompetency;
     }
-
-    // TODO: Add custom equals and hashCode methods. Consider two Job objects "equal" when their id fields
-    //  match.
 
     @Override
     public boolean equals(Object o) {
